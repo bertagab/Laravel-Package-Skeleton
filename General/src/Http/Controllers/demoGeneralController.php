@@ -14,6 +14,7 @@ class demoGeneralController extends Controller
      */
     public function __construct()
     {
+      // middleware for authentia
       $this->middleware('auth.demo');
 
       \App::singleton(

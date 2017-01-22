@@ -6,8 +6,6 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
 use Closure;
-use Menu;
-use Caffeinated\Menus\Builder;
 
 class demoGeneralServiceProvider extends ServiceProvider
 {
@@ -21,7 +19,7 @@ class demoGeneralServiceProvider extends ServiceProvider
         # Load package Routes
         require __DIR__.'/../Http/routes.php';
 
-        # Add the Package to config
+        # Add Package Views location
         View::addLocation(
           realpath(base_path('packages/demo/General/src/Views'))
         );
